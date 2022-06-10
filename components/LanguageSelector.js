@@ -13,6 +13,7 @@ const LanguageSelector = ({ t }) => {
 
 	return (
 		<div dir="ltr" className="languages">
+			Change your Language <br />
 			<select
 				className="language-select"
 				value={lang}
@@ -24,7 +25,7 @@ const LanguageSelector = ({ t }) => {
 					</option>
 				))}
 			</select>
-			<ul className="language-list">
+			{/* <ul className="language-list">
 				{Object.keys(allLanguages).map((code) => (
 					<li key={code}>
 						<a
@@ -37,7 +38,7 @@ const LanguageSelector = ({ t }) => {
 						</a>
 					</li>
 				))}
-			</ul>
+			</ul> */}
 		</div>
 	);
 };

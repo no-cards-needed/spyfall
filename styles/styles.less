@@ -1,7 +1,5 @@
 @import (css)
-	url("https://fonts.googleapis.com/css?family=Raleway:400,300,500,600");
-@import (css)
-	url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,vietnamese,latin-ext");
+	url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&display=swap");
 
 body {
 	text-align: center;
@@ -132,33 +130,7 @@ a {
 	margin: 0 0 15px 0;
 }
 
-.language-list {
-	font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
-		sans-serif;
-	display: none;
-	text-align: center;
-	margin: 0 0 15px 0;
-}
-
-.language-list li {
-	list-style-type: none;
-	display: inline-block;
-	padding-right: 5px;
-	margin-bottom: 0;
-}
-
-@media (min-width: 550px) {
-	.language-list {
-		display: block;
-	}
-
-	.language-select {
-		display: none;
-	}
-}
-
 button {
-	font-family: "Raleway";
 	text-transform: none;
 	letter-spacing: normal;
 	font-size: 14px;
@@ -167,6 +139,7 @@ button {
 	line-height: normal;
 	margin: 0.3em;
 	font-weight: 500;
+	border: none;
 }
 
 button:disabled {
@@ -174,9 +147,37 @@ button:disabled {
 }
 
 .btn-large {
-	font-size: 16px;
-	padding: 0 24px;
-	height: 42px;
+	margin: 1em auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 0px;
+	gap: 8px;
+	width: 350px;
+	height: 80px;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 24px;
+	/* Inside auto layout */
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+
+	/* big button label */
+	font-family: "Heebo";
+	font-style: normal;
+	font-weight: 745;
+	font-size: 20px;
+	line-height: 100%;
+	/* identical to box height, or 20px */
+	text-align: center;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+#btn-join-game {
+	background: #7741ea;
+	color: #ffffff;
 }
 
 .btn-small {

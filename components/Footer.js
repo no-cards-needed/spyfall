@@ -3,16 +3,12 @@ import React from "react";
 const Footer = () => (
 	<div className="footer">
 		Spyfall by{" "}
-		<a
-			href="https://www.tannerkrewson.com/"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
-			Tanner Krewson
+		<a href="https://nocardsneeded.app/" target="_blank">
+			No Cards Needed
 		</a>
 		<br />
 		<a
-			href="https://github.com/tannerkrewson/spyfall"
+			href="https://github.com/no-cards-needed/spyfall"
 			target="_blank"
 			rel="noopener noreferrer"
 		>

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import BuyMe from "../components/BuyMe";
 
 import { withTranslation } from "../utils/i18n";
 import Loading from "../components/Loading";
 import Swal from "sweetalert2";
 import { lockedMessage } from "../utils/misc";
 import AddAppButton from "../components/AddAppButton";
+import { Logo } from "../components/Logo";
 
 const Home = ({ t, i18n, loading }) => {
 	const router = useRouter();
@@ -46,24 +46,11 @@ const Home = ({ t, i18n, loading }) => {
 
 	return (
 		<div className="main-menu">
-			<div
-				style={{
-					position: "relative",
-					margin: "1em auto 0",
-					width: "fit-content",
-				}}
-			>
-				<h3>{t("ui.welcome to spyfall")}</h3>
-				<div className="subtitle formerly">(formerly Meteor/Crabhat)</div>
-			</div>
-			<hr />
+			<Logo />
 
 			{(loading || newGameLoading) && <Loading />}
 			{!loading && (
 				<>
-					<p>
-						The "no game was found" issue is fixed now! 🎉 Sorry about that 😭
-					</p>
 					<div className="button-container">
 						<Link href="/join">
 							<button id="btn-join-game" className="btn-large">
@@ -75,24 +62,22 @@ const Home = ({ t, i18n, loading }) => {
 						</button>
 					</div>
 					<div className="button-container-vertical">
-						<AddAppButton />
+						{/* TODO: Add back in later */}
+						{/* <AddAppButton /> */}
+
 						<Link href="/how-to-play">
 							<button className="btn-small btn-vertical">How to Play</button>
 						</Link>
-						<Link href="/more-games">
-							<button className="btn-small btn-vertical">
-								Games Like Spyfall
-							</button>
-						</Link>
 						<a
-							href="https://github.com/tannerkrewson/spyfall/blob/dev/README.md#history"
+							href="https://github.com/no-cards-needed/spyfall/blob/dev/README.md#history"
 							target="_blank"
 							rel="noopener noreferrer"
 							style={{ width: "100%" }}
 						>
 							<button className="btn-small btn-vertical">Crabhat?</button>
 						</a>
-						<a
+
+						{/* <a
 							href="https://docs.google.com/forms/d/e/1FAIpQLSe0lIL4ZYxyKDNHqv25VkLqOg7tk2VhOcOA-yDAuYxKFx6kyw/viewform?usp=sf_link"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -101,10 +86,7 @@ const Home = ({ t, i18n, loading }) => {
 							<button className="btn-small btn-vertical">
 								Submit Feedback
 							</button>
-						</a>
-						<div style={{ marginTop: "1em" }}>
-							<BuyMe />
-						</div>
+						</a> */}
 					</div>
 				</>
 			)}
